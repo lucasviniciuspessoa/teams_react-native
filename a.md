@@ -19,3 +19,11 @@ npx expo install expo-font @expo-google-fonts/inter
 npm i phosphor-react-native -D
 
 npm i react-native-svg
+
+
+qqr erro de tipagem, utilizar: 
+package.json 
+abaixo das devdependencies
+"@overrides": {
+    "@types/react": "18.0.14",
+}
