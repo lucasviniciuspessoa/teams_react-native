@@ -14,7 +14,9 @@ export function NewGroup() {
                 <FontAwesome name="users" size={56} color="#121214" />
                 </Icon>
                 <HighLight title="Nova turma" subtitle="Cria a turma para adicionar pessoas"/>
-                <Input/>
+                
+                <Input placeholder="Nome da turma"/>
+
                 <Button  style={{marginTop:20}}title="Criar"/>
             </Content>
 
