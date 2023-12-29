@@ -27,3 +27,11 @@ abaixo das devdependencies
 "@overrides": {
     "@types/react": "18.0.14",
 }
+
+npm install @react-navigation/native
+
+npx expo install react-native-screens react-native-safe-area-context
+
+
+npm install @react-navigation/native-stack
+

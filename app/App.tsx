@@ -5,8 +5,7 @@ import {  Text, View, StyleSheet, ActivityIndicator, StatusBar } from 'react-nat
 import { ThemeProvider } from 'styled-components';
 import {useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto'
 import { Loading } from './src/comṕonents/Loading';
-import { NewGroup } from './src/screens/NewGroup';
-import { Players } from './src/screens/Players';
+import { Routes } from './src/routes/index';
 export default function App() {
 
 
@@ -16,7 +15,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
        <View style={styles.container}>
-      {fontsLoaded? <Players/> : <Loading/>}
+      {fontsLoaded? <Routes/> : <Loading/>}
     </View>
     <StatusBar barStyle='default'  />
      </ThemeProvider>
