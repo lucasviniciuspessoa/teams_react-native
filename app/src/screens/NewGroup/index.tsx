@@ -4,8 +4,14 @@ import { Container, Content, Icon } from "./styles";
 import { FontAwesome } from '@expo/vector-icons';
 import { Button } from "../../comṕonents/Button";
 import { Input } from "../../comṕonents/Input";
+import { useNavigation } from "@react-navigation/native";
 
 export function NewGroup() {
+    const navigation = useNavigation();
+    function handleNew() {
+        // pode usar o popTop tbm.
+        navigation.navigate('players', {group: "Novo"})
+    }
     return (
         <Container>
             <Header showBackButton />
@@ -17,7 +23,7 @@ export function NewGroup() {
                 
                 <Input placeholder="Nome da turma"/>
 
-                <Button  style={{marginTop:20}}title="Criar"/>
+                <Button  style={{marginTop:20}}title="Criar"  onPress={handleNew}/>
             </Content>
 
         </Container>
