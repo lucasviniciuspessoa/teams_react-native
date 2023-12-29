@@ -17,7 +17,7 @@ export default function App() {
        <View style={styles.container}>
       {fontsLoaded? <Routes/> : <Loading/>}
     </View>
-    <StatusBar barStyle='default'  />
+    {/* <StatusBar barStyle='default'  /> */}
      </ThemeProvider>
   );
 }
