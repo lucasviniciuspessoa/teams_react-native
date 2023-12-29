@@ -8,6 +8,7 @@ import { Filter } from "../../comṕonents/Filter";
 import { useState } from "react";
 import { PlayerCard } from "../../comṕonents/PlayerCard";
 import { ListEmpty } from "../../comṕonents/ListEmpty";
+import { Button } from "../../comṕonents/Button";
 
 export function Players() {
 
@@ -61,6 +62,8 @@ export function Players() {
                                 ]
                             }
             />
+
+            <Button title="Remover turma" type="SECONDARY"/>
 
         </Container>
 
