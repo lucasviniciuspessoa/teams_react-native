@@ -10,7 +10,7 @@ import {  NewGroup} from '../screens/NewGroup';
 
 export function AppRoutes() {
     return (
-        <Stack.Navigator screenOptions={{headerShown:true}}>
+        <Stack.Navigator initialRouteName='groups' screenOptions={{headerShown:true}}>
             <Stack.Screen  name="groups" component={Groups}/>
             <Stack.Screen  name="new" component={NewGroup}/>
             <Stack.Screen  name="players" component={Players}/>

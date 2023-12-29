@@ -6,10 +6,32 @@ import { useState } from "react";
 import { FlatList } from "react-native";
 import { ListEmpty } from "../../comṕonents/ListEmpty";
 import { Button } from "../../comṕonents/Button";
+import {useNavigation} from '@react-navigation/native'
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-export function Groups() {
 
+type RootParamList = {
+    groups: undefined;
+    new: undefined;
+    players: {
+        group: string;
+    }
+}
+
+type Props = {
+    navigation: NativeStackNavigationProp<RootParamList, 'groups'>;
+}
+export function Groups({navigation}: Props) {
     const [groups, setGroups] = useState<string[]>([]);
+
+    // const navigation = useNavigation();
+    function handleNewGroup() {
+        // navigation.navigate('new') nao precisa por o container navigation ja compartilha com as rotas o navigate
+
+        navigation.navigate('new')
+
+    }
+
     return (
         <Container>
           <Header />
@@ -27,7 +49,9 @@ export function Groups() {
            />
           
 
-            <Button title="Criar nova turma"/>
+            <Button title="Criar nova turma"
+                onPress={handleNewGroup}
+            />
         </Container>
     )
 }
