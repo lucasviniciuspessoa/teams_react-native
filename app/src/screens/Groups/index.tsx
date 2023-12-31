@@ -2,7 +2,7 @@ import { Container, Title } from "./styles";
 import { Header } from "../../comṕonents/Header"
 import { HighLight } from "../../comṕonents/Highlight";
 import { GroupCard } from "../../comṕonents/GroupCard";
-import { useEffect, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { FlatList } from "react-native";
 import { ListEmpty } from "../../comṕonents/ListEmpty";
 import { Button } from "../../comṕonents/Button";
