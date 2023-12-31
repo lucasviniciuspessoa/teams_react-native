@@ -5,17 +5,30 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Button } from "../../comṕonents/Button";
 import { Input } from "../../comṕonents/Input";
 import { useNavigation } from "@react-navigation/native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { groupCreate } from "../../storage/group/groupCreate";
+import { groupGetAll } from "../../storage/group/groupGetAll";
 
 export function NewGroup() {
+    
+    const [group, setGroup ] = useState('');
     const navigation = useNavigation();
 
-    const [group, setGroup ] = useState('');
-
-    function handleNew() {
-        // pode usar o popTop tbm.
+    async function handleNew() {
+       try {
+        await groupCreate(group)
         navigation.navigate('players', {group})
+       } catch(error) 
+       {
+        console.log(error)
+       }
+        // pode usar o popTop tbm.
     }
+
+
+
+    
+
     return (
         <Container>
             <Header showBackButton />
